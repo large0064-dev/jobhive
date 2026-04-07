@@ -8,38 +8,72 @@
 
 <header>
   <h1>💼 JobHive</h1>
-  <p>Find Latest Government & Private Jobs in India</p>
+  <p>Find Jobs & Learn Skills</p>
 </header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="jobs.html">All Jobs</a>
+  <a href="jobs.html">Jobs</a>
   <a href="admin.html" id="adminLink">Admin</a>
   <a href="#" onclick="logout()">Logout</a>
 </nav>
 
 <section>
 
-  <!-- TRUST LINE -->
-  <p style="color:green; font-weight:bold;">
+  <!-- TRUST -->
+  <p class="trust">
     🔥 One-time ₹19 • Lifetime Access • No Hidden Charges
   </p>
 
   <!-- JOB SECTION -->
   <h2>💼 Job Categories</h2>
 
-  <div class="card" onclick="goToJobs()">Government Jobs 🔒</div>
-  <div class="card" onclick="goToJobs()">Private Jobs 🔒</div>
-  <div class="card" onclick="goToJobs()">Part-Time Jobs 🔒</div>
+  <div class="grid">
+    <div class="card" onclick="goToJobs()">
+      <h3>Government Jobs</h3>
+      <p>Latest Govt Vacancies 🔒</p>
+    </div>
+
+    <div class="card" onclick="goToJobs()">
+      <h3>Private Jobs</h3>
+      <p>Top Company Hiring 🔒</p>
+    </div>
+
+    <div class="card" onclick="goToJobs()">
+      <h3>Part-Time Jobs</h3>
+      <p>Work From Home 🔒</p>
+    </div>
+  </div>
 
   <!-- EBOOK SECTION -->
-  <h2>📚 Ebooks</h2>
+  <h2>📚 Ebooks & Skills</h2>
 
-  <div class="card" onclick="goToPayment()">Artificial Intelligence (AI) 🔒</div>
-  <div class="card" onclick="goToPayment()">Digital Marketing 🔒</div>
-  <div class="card" onclick="goToPayment()">Software Development 🔒</div>
-  <div class="card" onclick="goToPayment()">Sales & Business 🔒</div>
-  <div class="card" onclick="goToPayment()">Construction & Infrastructure 🔒</div>
+  <div class="grid">
+    <div class="card" onclick="goToPayment()">
+      <h3>AI & Automation</h3>
+      <p>Future Skills 🔒</p>
+    </div>
+
+    <div class="card" onclick="goToPayment()">
+      <h3>Digital Marketing</h3>
+      <p>Online Earning 🔒</p>
+    </div>
+
+    <div class="card" onclick="goToPayment()">
+      <h3>Software Dev</h3>
+      <p>No-Code Skills 🔒</p>
+    </div>
+
+    <div class="card" onclick="goToPayment()">
+      <h3>Sales</h3>
+      <p>Business Growth 🔒</p>
+    </div>
+
+    <div class="card" onclick="goToPayment()">
+      <h3>Construction</h3>
+      <p>Infra Skills 🔒</p>
+    </div>
+  </div>
 
 </section>
 
