@@ -1,91 +1,63 @@
-/* ================= GLOBAL ================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f5f7fa;
+  background: #f8f9fb;
 }
 
-/* ================= HEADER ================= */
 header {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: white;
+  background: white;
+  padding: 15px;
   text-align: center;
-  padding: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-header p {
-  margin: 5px 0 0;
-}
-
-/* ================= NAV ================= */
 nav {
-  background: #222;
+  background: #111;
   padding: 10px;
   text-align: center;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 10px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-nav a:hover {
-  color: #00c6ff;
-}
-
-/* ================= SECTION ================= */
 section {
   padding: 20px;
 }
 
-/* ================= CARD ================= */
+.trust {
+  color: green;
+  font-weight: bold;
+}
+
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* CARD */
 .card {
   background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  cursor: pointer;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
-/* ================= BUTTON ================= */
-button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-/* ================= INPUT ================= */
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* ================= HEADINGS ================= */
+/* TEXT */
 h2 {
-  margin-top: 20px;
-  color: #333;
+  margin-top: 25px;
+}
+
+h3 {
+  margin: 0;
 }
