@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JobHive - India Jobs Portal</title>
+  <title>JobHive</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,12 +14,24 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="jobs.html">All Jobs</a>
-  <a href="admin.html">Admin</a>
+  <a href="admin.html" id="adminLink">Admin</a>
+  <a href="#" onclick="logout()">Logout</a>
 </nav>
 
 <section>
-  <h2>🔥 Latest Jobs</h2>
-  <div id="jobList"></div>
+  <h2>💼 Job Categories</h2>
+
+  <div class="card" onclick="goToJobs()">Government Jobs 🔒</div>
+  <div class="card" onclick="goToJobs()">Private Jobs 🔒</div>
+  <div class="card" onclick="goToJobs()">Part-Time Jobs 🔒</div>
+
+  <h2>📚 Ebooks</h2>
+
+  <div class="card" onclick="goToPayment()">AI Ebook 🔒</div>
+  <div class="card" onclick="goToPayment()">Digital Marketing 🔒</div>
+  <div class="card" onclick="goToPayment()">Software Development 🔒</div>
+  <div class="card" onclick="goToPayment()">Sales & Business 🔒</div>
+  <div class="card" onclick="goToPayment()">Construction 🔒</div>
 </section>
 
 <script src="app.js"></script>
