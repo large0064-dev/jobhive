@@ -49,6 +49,15 @@ function logout() {
   window.location.href = "login.html";
 }
 
+// ================= PAYMENT =================
+function payNow() {
+  alert("Payment Successful! (Demo)");
+
+  localStorage.setItem("paid", "true");
+
+  window.location.href = "index.html";
+}
+
 // ================= ADD JOB =================
 function addJob() {
   let title = document.getElementById("title").value;
@@ -91,12 +100,19 @@ function displayJobs() {
   });
 }
 
-// ================= OPEN JOB =================
+// ================= OPEN JOB (LOCK SYSTEM) =================
 function openJob(id) {
-  // Check login first
+  // check login
   if (localStorage.getItem("loggedIn") !== "true") {
     alert("Please login first");
     window.location.href = "login.html";
+    return;
+  }
+
+  // check payment
+  if (localStorage.getItem("paid") !== "true") {
+    alert("Please pay ₹19 to unlock");
+    window.location.href = "payment.html";
     return;
   }
 
@@ -109,9 +125,13 @@ function showJobDetails() {
   let container = document.getElementById("jobDetails");
   if (!container) return;
 
-  // Check login
   if (localStorage.getItem("loggedIn") !== "true") {
     window.location.href = "login.html";
+    return;
+  }
+
+  if (localStorage.getItem("paid") !== "true") {
+    window.location.href = "payment.html";
     return;
   }
 
