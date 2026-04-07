@@ -1,36 +1,91 @@
+/* ================= GLOBAL ================= */
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  background: #f5f7fa;
 }
 
+/* ================= HEADER ================= */
 header {
-  background: #1e88e5;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+/* ================= NAV ================= */
 nav {
-  background: #333;
+  background: #222;
   padding: 10px;
   text-align: center;
 }
 
 nav a {
   color: white;
-  margin: 10px;
+  margin: 0 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
+nav a:hover {
+  color: #00c6ff;
+}
+
+/* ================= SECTION ================= */
 section {
-  padding: 15px;
+  padding: 20px;
 }
 
+/* ================= CARD ================= */
 .card {
   background: white;
   padding: 15px;
   margin: 10px 0;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= BUTTON ================= */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ================= INPUT ================= */
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ================= HEADINGS ================= */
+h2 {
+  margin-top: 20px;
+  color: #333;
 }
