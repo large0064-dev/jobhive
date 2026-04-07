@@ -58,6 +58,38 @@ function payNow() {
   window.location.href = "index.html";
 }
 
+// ================= NAVIGATION =================
+function goToJobs() {
+  if (localStorage.getItem("loggedIn") !== "true") {
+    alert("Please login first");
+    window.location.href = "login.html";
+    return;
+  }
+
+  if (localStorage.getItem("paid") !== "true") {
+    alert("Please pay ₹19 to unlock");
+    window.location.href = "payment.html";
+    return;
+  }
+
+  window.location.href = "jobs.html";
+}
+
+function goToPayment() {
+  if (localStorage.getItem("loggedIn") !== "true") {
+    alert("Please login first");
+    window.location.href = "login.html";
+    return;
+  }
+
+  if (localStorage.getItem("paid") !== "true") {
+    window.location.href = "payment.html";
+    return;
+  }
+
+  alert("Already unlocked!");
+}
+
 // ================= ADD JOB =================
 function addJob() {
   let title = document.getElementById("title").value;
@@ -100,16 +132,14 @@ function displayJobs() {
   });
 }
 
-// ================= OPEN JOB (LOCK SYSTEM) =================
+// ================= OPEN JOB =================
 function openJob(id) {
-  // check login
   if (localStorage.getItem("loggedIn") !== "true") {
     alert("Please login first");
     window.location.href = "login.html";
     return;
   }
 
-  // check payment
   if (localStorage.getItem("paid") !== "true") {
     alert("Please pay ₹19 to unlock");
     window.location.href = "payment.html";
@@ -150,6 +180,19 @@ function showJobDetails() {
   }
 }
 
+// ================= ADMIN CHECK =================
+function checkAdmin() {
+  let user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user || user.username !== "admin") {
+    let adminLink = document.getElementById("adminLink");
+    if (adminLink) {
+      adminLink.style.display = "none";
+    }
+  }
+}
+
 // ================= INIT =================
 displayJobs();
 showJobDetails();
+checkAdmin();
